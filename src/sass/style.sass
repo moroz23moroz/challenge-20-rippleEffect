@@ -12,9 +12,10 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
+    background: black
+    font-family: $arsenal, sans-serif
+    height: 100vh
+    overflow: hidden
 
 *
     box-sizing: border-box
@@ -24,33 +25,33 @@ html
     scroll-behavior: smooth
 
 button
-    padding: 0
-    background-color: transparent
-    border: none
+    position: relative
+    background-color: purple
+    border: 1px purple solid
+    font-size: 16px
+    color: whitesmoke
+    text-transform: uppercase
+    letter-spacing: 2px
+    padding: 20px 30px
+    overflow: hidden
+    margin: 10px 0
+    border-radius: 5px
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4)
+    transition: box-shadow 0.3s
+    transition-timing-function: ease
+    &:hover
+        box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.6)
+    &:focus
+        outline: none
+    & .circle
+        position: absolute
+        background-color: whitesmoke
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        transform: translate(-50%, -50%) scale(0)
+        animation: scale 0.5s ease-out
 
-h1, h2, h3, h4
-    margin: 0
-    font-weight: normal
-
-img
-    width: auto
-    max-width: 100%
-    height: auto
-
-iframe, img, svg, video
-    max-width: 100%
-    vertical-align: top
-    height: auto
-
-p
-    margin: 0
-
-ul
-    margin: 0
-    padding-left: 0
-
-li
-    list-style-type: none
-
-a
-    text-decoration: none
+@keyframes scale
+    transform: translate(-50%, -50%) scale(3)
+    opacity: 0
